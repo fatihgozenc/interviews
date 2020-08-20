@@ -14,7 +14,7 @@
 				},
 				{
 					"q": "What testing strategy do you use?",
-					"a": "I use Test-Driven-Development for logic and autoamted UI tests for the rest"
+					"a": "I use Test-Driven-Development for logic and automated UI tests for the rest"
 				},
 				{
 					"q": "How do you handle component reuse?",
@@ -73,12 +73,8 @@
 					"a": "I would get them from an external tool."
 				}
 			],
-			"redux": [
-				{}
-			],
-			"hooks": [
-				{}
-			]
+			"redux": [],
+			"hooks": []
 		}
 	}
 }
