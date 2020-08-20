@@ -1,0 +1,24 @@
+.categories{
+	display: flex;
+	justify-content: center;
+	&__setter{
+		text-transform: uppercase;
+		-webkit-appearance: none;
+		border: 1px solid $blueLight;
+		color: $blueLight;
+		background: $blueDark;
+		font-size: 11px;
+		padding: .5rem;
+		margin: 0 .5rem .5rem 0;
+		border-radius: 8px;
+		font-weight: bold;
+		.active{
+			
+		}
+		&:focus{
+			outline: none;
+			background: $blueLight;
+			color: $blueDark
+		}
+	}
+}

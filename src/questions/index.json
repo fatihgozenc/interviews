@@ -1,7 +1,48 @@
 {
 	"data": {
 		"javascript": {
-			"general": []
+			"general": [
+				{
+					"q": "What is the diffence between var and let keywords?",
+					"a": "var was introduced with JS. let is introduced with ES6. var has function scope, let has block scope. var gets hoisted but let doesn't."
+				},
+				{
+					"q": "What is the difference between == and ===?",
+					"a": "== compares the value not type. But === compares value and type."
+				},
+				{
+					"q": "What is the diffence between let and const keywords?",
+					"a": "You can reassign a value to let as much as you want. But you can not reassign a value to const."
+				},
+				{
+					"q": "What is the diffence between undefined and null keywords?",
+					"a": "They both represent an empty value. But undefined is type of undefined and null is type of object."
+				},
+				{
+					"q": "What is use of Arrow function?",
+					"a": "Normal functions bind 'this' to window's this. But arrow functions don'have their own this so it works well as object methods."
+				},
+				{
+					"q": "What is prototypal inheritance?",
+					"a": "Every object has a property called prototype. When you create new objects from an object will automatically inherit the property of its parent. Not by including in itself but instead it uses from it's parent."
+				},
+				{
+					"q": "What is the difference between function declaration & function expression?",
+					"a": "Function expressions can not be executed before function declarations. Because function scope stacked before variable scope in runtime of Javascript. And when you pass a function into another function, you need to pass the function expression."
+				},
+				{
+					"q": "What is promises and why do we use it?",
+					"a": "When we want to make an async call which has to wait for something to happen. And once it comes back you exit with a callback function. And within that callback function you might need another async call which waits for another callback. So it could become kind of callback hell. To simplify this process we use promises."
+				},
+				{
+					"q": "setTimeout() issue?",
+					"a": "setTimeout always gets executed after stack finishes even it has 0 timeout value. Because it's an async operation."
+				},
+				{
+					"q": "What is closure and how do we use it?",
+					"a": "When a function returns another function the returning function will hold its environment, basically all variables that it needs. We can see it inside the scopes property of the function."
+				}
+			]
 		},
 		"node": {
 			"general": []

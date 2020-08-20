@@ -16,14 +16,16 @@ const App = () => {
 		Object.entries(data).reduce((acc, cur) => [...acc, Object.values(cur[1])], [])
 	)
 
-	const [searchQuery, setSearchQuery] = React.useState("");
-	const [category, setCategory] = React.useState("");
 	const [content, setContent] = React.useState(allQuestions)
 
-	const filterSearch = (query) => {
+	const filterBySearch = (query) => {
 		setContent(
 			allQuestions.filter(el => (el.q.toLowerCase().includes(query) || el.a.toLowerCase().includes(query)))
 		)
+	}
+
+	const filterByCategory = (cat) => {
+		setContent(data[cat].general)
 	}
 
 	return (
@@ -31,7 +33,8 @@ const App = () => {
 			<Header
 				categories={categories}
 				subCategories={subCategories}
-				handleSearch={filterSearch} />
+				handleCategory={filterByCategory}
+				handleSearch={filterBySearch} />
 			<CardList content={content} />
 		</main>
 	);
