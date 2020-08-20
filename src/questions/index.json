@@ -45,7 +45,12 @@
 			]
 		},
 		"node": {
-			"general": []
+			"general": [
+				{
+					"q": "What is the difference between JavaScript and Node.js?",
+					"a": "JS is the language, NodeJS is the interpreter and environment for JS. JS runs on browser based engines, NodeJS runs on Google's V8. JS used for any client-side activity for a web app but NodeJS can be used for"
+				}
+			]
 		},
 		"react": {
 			"general": [
