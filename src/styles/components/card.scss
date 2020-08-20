@@ -1,0 +1,24 @@
+.card{
+	margin: .5rem 1rem;
+	padding: 0 1rem;
+	border: 1px solid $blueLight;
+	border-radius: 8px;
+	&__answer{
+		color: #fff;
+		padding-bottom: .5rem;
+	}
+}
+
+@media (min-width: 767px){
+	.card{
+		flex: 0 45%;
+		margin: .5rem 0;
+	}
+}
+
+@media (min-width: 1141px){
+	.card{
+		flex: 0 30%;
+		margin: .5rem 0;
+	}
+}

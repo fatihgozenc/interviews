@@ -1,0 +1,84 @@
+{
+	"data": {
+		"javascript": {
+			"general": []
+		},
+		"node": {
+			"general": []
+		},
+		"react": {
+			"general": [
+				{
+					"q": "What tools do you use for your project and why?",
+					"a": "Webpack, React Router and Typescript, because they're industry standards."
+				},
+				{
+					"q": "What testing strategy do you use?",
+					"a": "I use Test-Driven-Development for logic and autoamted UI tests for the rest"
+				},
+				{
+					"q": "How do you handle component reuse?",
+					"a": "I refactor when I see duplication but some components are generic."
+				},
+				{
+					"q": "When do you use SSR and why?",
+					"a": "I used it with NextJS and custom express server for SEO purposes before, but I don't work that much in Node."
+				},
+				{
+					"q": "What tasks do you run and how?",
+					"a": "I try to use a task runner like Gulp and Webpack for bundling. Because when you put everything in webpack it may cause a very big productivity problem depending on size of the project."
+				},
+				{
+					"q": "When do you use component based testing and why?",
+					"a": "I use Jest but only for generic components since I use UI testing mostly."
+				},
+				{
+					"q": "Do you use Test-Driven-Development and how?",
+					"a": "I find it hard to use TDD for components so I use it for logic."
+				},
+				{
+					"q": "What state do you put where and why?",
+					"a": "I only put shared data on the store and private data on the state."
+				},
+				{
+					"q": "What's more important, clean code or good enough?",
+					"a": "I try to write clean code but sometimes I need to hack things together."
+				},
+				{
+					"q": "How do you handle bundling performance?",
+					"a": "There are loaders for it but mostly I try to reduce the bundling process. For example scope hoisting with moduleConcatenationPlugin. Webpack saves its require method call by inlining its helper method and also saves access to the modules array. Or treeshaking, importing by module name as much as possible. Chunk splitting, brotli compressions."
+				},
+				{
+					"q": "How do you handle multiple component variants in the same codebase?",
+					"a": "I raise awareness in the company and take action after that."
+				},
+				{
+					"q": "How do you handle feature toggling? (like some features are off or on)",
+					"a": "I use a config file or similar."
+				},
+				{
+					"q": "How do you avoid component duplication?",
+					"a": "It is hard to solve this so I talk to the teams and use good names like spesific names for its context."
+				},
+				{
+					"q": "How do you handle A/B testing?",
+					"a": "I create a temporary component in isolation."
+				},
+				{
+					"q": "How do you handle branding/themes?",
+					"a": "I use a variant prop in the components."
+				},
+				{
+					"q": "How do you handle translations?",
+					"a": "I would get them from an external tool."
+				}
+			],
+			"redux": [
+				{}
+			],
+			"hooks": [
+				{}
+			]
+		}
+	}
+}
