@@ -117,6 +117,14 @@
 				{
 					"q": "How do you handle translations?",
 					"a": "I would get them from an external tool."
+				},
+				{
+					"q": "Imperative vs Declarative - reason of React?",
+					"a": "Instead of saying one by one, to this and that happens, we declare actions it the state of our app and React automaticaly just does it for us. So, this results in less complexity and better code quality and faster development times. So whatever your state is, it just reacts to it and make necessary chantges without touching the dom."
+				},
+				{
+					"q": "What is the job of React developer?",
+					"a": "Decide on components, decide the state and where it lives, what changes when state changes."
 				}
 			],
 			"redux": [],
