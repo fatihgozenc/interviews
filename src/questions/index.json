@@ -127,7 +127,44 @@
 					"a": "Decide on components, decide the state and where it lives, what changes when state changes."
 				}
 			],
-			"redux": [],
+			"redux": [
+				{
+					"q": "What is Flux?",
+					"a": "Flux is an application design paradigm used as a replacement for the more traditional MVC pattern. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook used this pattern internally when working with React The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows: View -> Action -> Dispatcher -> Store -> View..."
+				},
+				{
+					"q": "What is Redux?",
+					"a": "Redux is a predictable state container for JavaScript apps based on the Flux design pattern. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies."
+				},
+				{
+					"q": "What is store in Redux?",
+					"a": "The store holds the application state and supplies the helper methods for accessing the state. We can register to listeners bia subscribe method and dispatch actions from reducers. There is only one Store while using Redux. The store is configured via the createStore function. The single store represents the entire state. Reducers return a state via action."
+				},
+				{
+					"q": "What are reducers in Redux?",
+					"a": "The reducer is a pure function that takes the previous state and an action, and returns the next state. (prevState, action) => newState. It's called a reducer because it's the type of function you would pass to Array.prototype.reduce(reducer, initialValue). It's very important that the reducer stays pure. You should never mutate its arguments, perform side-effects like API calls and routing transitions, call non-pure functions, e.g. Date.now or Math.random."
+				},
+				{
+					"q": "How to use connect from React Redux?",
+					"a": "Use mapStateToProps(state): It maps the state variables from your store to the props that you specify. You need to return the required object from the state, then you need to wrap component with connect as a HOC. E.g export default connect(mapStateToProps)(App). Or you can map you action dispatchers via mapDispatchToProps(dispatch). You need to import your action first like import {addArticle} from './actions' then mapDispatchToProps = (dispatch) => addArticle: article => dispatch(addArticle(article)). On export; export default connect(null, mapDispatchToProps)(App). If mapStateToProps is absent, we need to pass null at first otherwise we'll get TypeError: dispatch is not a function."
+				},
+				{
+					"q": "What is the difference between React context and React Redux?",
+					"a": "You can use Context in your application directly and is going to be great for passing down data to deeply nested components which what it was designed for. Whereas Redux is much more powerful and provides a large number of features that the Context Api doesn't provide. Also, React Redux uses context internally but it doesn’t expose this fact in the public API. So you should feel much safer using context via React Redux than directly because if it changes, the burden of updating the code will be on React Redux instead developer responsibility."
+				},
+				{
+					"q": "What is a Redux middleware?",
+					"a": "Redux middleware is a function that is able to intercept and act accordingly on our Redux actions before they reach the reducer. You can use applyMiddleware func where you can pass each piece of middleware as a new argument. So you just need to pass each piece of middleware you'd like."
+				},
+				{
+					"q": "What is Redux Thunk?",
+					"a": "Redux Thunk middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods dispatch and getState() as parameters."
+				},
+				{
+					"q": "How to structure Redux top level directories?",
+					"a": "1. Components; used for dumb React components unaware of Redux. 2. Containers; used for smart React components connected to Redux. 3. Actions; used for all action creators, where file name corresponds to part of the app. 4. Reducers; used for all reducers, where file name corresponds to state key. 5. Store; used for store initialization."
+				}
+			],
 			"hooks": []
 		}
 	}
