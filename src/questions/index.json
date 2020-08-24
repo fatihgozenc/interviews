@@ -145,6 +145,10 @@
 					"a": "The reducer is a pure function that takes the previous state and an action, and returns the next state. (prevState, action) => newState. It's called a reducer because it's the type of function you would pass to Array.prototype.reduce(reducer, initialValue). It's very important that the reducer stays pure. You should never mutate its arguments, perform side-effects like API calls and routing transitions, call non-pure functions, e.g. Date.now or Math.random."
 				},
 				{
+					"q": "What is the purpose of the constants in Redux?",
+					"a": "Constants allow you to easily find all usages of that specific functionality across the project when you use an IDE. It also prevents you from introducing silly bugs caused by typos -- in which case, you will get a ReferenceError immediately. Normally we will save them in a single file (constants.js or actionTypes.js) For example: export const ADD_TODO = 'ADD_TODO'. And you use them in two places: During actions creation in actions file and reducers file."
+				},
+				{
 					"q": "How to use connect from React Redux?",
 					"a": "Use mapStateToProps(state): It maps the state variables from your store to the props that you specify. You need to return the required object from the state, then you need to wrap component with connect as a HOC. E.g export default connect(mapStateToProps)(App). Or you can map you action dispatchers via mapDispatchToProps(dispatch). You need to import your action first like import {addArticle} from './actions' then mapDispatchToProps = (dispatch) => addArticle: article => dispatch(addArticle(article)). On export; export default connect(null, mapDispatchToProps)(App). If mapStateToProps is absent, we need to pass null at first otherwise we'll get TypeError: dispatch is not a function."
 				},
