@@ -170,6 +170,34 @@
 				}
 			],
 			"hooks": []
+		},
+		"jest": {
+			"general": [
+				{
+					"q": "What is usage of toBe()?",
+					"a": "Similar to === or Object.is .It's a matcher function / assertion to test a value with exact equality. E.g expect(1).toBe(1) You can negate it with .not.toBe(). Two object may look the same but they're not actually equal. So when we compare same references, toBe is useful."
+				},
+				{
+					"q": "What is usage of toEqual()?",
+					"a": "It's a matcher function to test a value with exact equality with different references. This is the main difference from toBe() Like lodash's _.isEqual. E.g var obj = {'a': 1} var other = {'a': 1} _.isEqual(obj, other) -> true, obj === other -> false . We can also use this func with a schema object."
+				},
+				{
+					"q": "What is usage of toMatchObject()?",
+					"a": "It's a matcher function to test a value with partial equality. E.g var sub = {a:{b:'c'},d:'e'} var act = {a:{b:'c'}} expect(sub).toMatchObject(act) -> true. But if var sub = {a:{b:'c'},d:'e'} var act = {a:{b:'c'},f:'g'} expect(sub).toMatchObject(act) -> false, and show which property is different. We can also use this func with a schema object."
+				},
+				{
+					"q": "What are mocks?",
+					"a": "Mocks are functions that keep track of how they're called and what they're called with.It has a property called mock. It has some information e.g. calls. We can see it bt const = [[[firstArg, secondArg]] = fn.mock.calls . So we can expect these called arguments."
+				},
+				{
+					"q": "What is usage of toHaveBeenCalledTimes?",
+					"a": "We can create this function Jest Functions API. We use .toHaveBeenCalledTimes(int) to ensure that a mock function got called exact number of time. E.g let's say you have a drinkEach(drink, Array<flavor>) function that takes a drink function and applies it to array of passed beverages. You might want to check that drink function was called exact number of times. test('drinkEach drinks each drink', () => { const drink = jest.fn(); drinkEach(drink, ['lemon', 'octopus']); expect(drink).toHaveBeenCalledTimes(2); It is also under the alias: .toBeCalledTimes(int)"
+				},
+				{
+					"q": "What is usage of toHaveBeenCalledWith?",
+					"a": "We can create this function Jest Functions API. We use .toHaveBeenCalledTimes(int) to ensure that a mock function got called exact number of time. It uses toEqual so we can use different references. E.g let's say that you can register a beverage with a register function, and applyToAll(f) should apply the function f to all registered beverages. To make sure this works. test('registration applies correctly to orange La Croix', () => {const beverage = new LaCroix('orange'); register(beverage); const f = jest.fn(); applyToAll(f); expect(f).toHaveBeenCalledWith(beverage); });"
+				}
+			]
 		}
 	}
 }
