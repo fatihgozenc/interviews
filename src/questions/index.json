@@ -160,11 +160,11 @@
 				},
 				{
 					"q": "What is a Redux middleware?",
-					"a": "Redux middleware is a function that is able to intercept and act accordingly on our Redux actions before they reach the reducer. You can use applyMiddleware func where you can pass each piece of middleware as a new argument. So you just need to pass each piece of middleware you'd like."
+					"a": "Redux middleware is a function that is able to intercept and act accordingly on our Redux actions before they reach the reducer. You can use applyMiddleware func where you can pass each piece of middleware as a new argument. So you just need to pass each piece of middleware you'd like. In its basic form a Redux middleware is a function returning a function, which takes next as a parameter. Then the inner function returns another function which takes action as a parameter and finally returns next(action) E.g function middleware({getState, dispatch}){return function (next){return function (action){//do your stuff return next(action)}}}. This last point is really important: you should always call next(action) in your middleware. If you forget it, Redux stops, and no other action will reach the reducer. next(action) moves the application forward by calling the next middleware in the chain. In a middleware you can also access getState and dispatch"
 				},
 				{
 					"q": "What is Redux Thunk?",
-					"a": "Redux Thunk middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods dispatch and getState() as parameters."
+					"a": "Redux Thunk middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods dispatch and getState as parameters. E.g you want to make an API call with fetch in an action, but you get 'Error: Actions must be plain objects. Use custom middleware for async actions'. So we need a custom middleware for that which is redux-thunk. E.g function getData(){return function(dispatch,getState){}return fetch(url).then(res => res.json()).then(json => dispatch({type: 'DATA_LOADED', payload: json}))}"
 				},
 				{
 					"q": "How to structure Redux top level directories?",
