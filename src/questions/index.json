@@ -1,6 +1,6 @@
 {
 	"data": {
-		"javascript": {
+		"js": {
 			"general": [
 				{
 					"q": "What is the diffence between var and let keywords?",
@@ -126,8 +126,10 @@
 					"q": "What is the job of React developer?",
 					"a": "Decide on components, decide the state and where it lives, what changes when state changes."
 				}
-			],
-			"redux": [
+			]
+		},
+		"redux": {
+			"general": [
 				{
 					"q": "What is Flux?",
 					"a": "Flux is an application design paradigm used as a replacement for the more traditional MVC pattern. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook used this pattern internally when working with React The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows: View -> Action -> Dispatcher -> Store -> View..."
@@ -168,8 +170,7 @@
 					"q": "How to structure Redux top level directories?",
 					"a": "1. Components; used for dumb React components unaware of Redux. 2. Containers; used for smart React components connected to Redux. 3. Actions; used for all action creators, where file name corresponds to part of the app. 4. Reducers; used for all reducers, where file name corresponds to state key. 5. Store; used for store initialization."
 				}
-			],
-			"hooks": []
+			]
 		},
 		"jest": {
 			"general": [

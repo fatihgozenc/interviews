@@ -28,12 +28,17 @@ const App = () => {
 		setContent(data[cat].general)
 	}
 
+	const resetContent = () => {
+		setContent(allQuestions)
+	}
+
 	return (
 		<main className="App">
 			<Header
 				categories={categories}
 				subCategories={subCategories}
 				handleCategory={filterByCategory}
+				handleReset={resetContent}
 				handleSearch={filterBySearch} />
 			<CardList content={content} />
 		</main>

@@ -13,6 +13,11 @@ const Header = (props) => {
 				/>
 			</section>
 			<section className="categories">
+				<input
+					value="All"
+					type="submit"
+					onClick={() => props.handleReset()}
+					className="categories__setter" />
 				{
 					props.categories.map((cat, i) => (
 						<input
